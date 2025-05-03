@@ -150,6 +150,7 @@ export default function Home() {
                   "Node.js",
                   "Express",
                   "MongoDB",
+                  "PostgreSQL",
                   "Prisma",
                   "Express.js",
                   "Cloudinary",
@@ -176,10 +177,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section
-          id="experience"
-          className="w-full py-6 md:py-10 lg:py-12 md:bg-muted/50"
-        >
+        <section id="experience" className="w-full py-6 md:py-10 lg:py-12">
           <div className="mx-auto flex max-w-[980px] flex-col items-start gap-4">
             <h2 className="text-3xl font-bold leading-tight tracking-tighter md:text-4xl">
               Experience

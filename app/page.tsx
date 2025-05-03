@@ -3,14 +3,16 @@ import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
 import { useState, useEffect } from "react";
 import profilePhoto from "@/public/profilePhoto.png";
-import ridemama from "@/public/ridemama.png";
+import ridemama from "@/public/ridemama.jpeg";
 import onlineDiner from "@/public/online-diner.png";
+import drmSystem from "@/public/drm-system.png";
 import Image from "next/image";
 import { Github, Mail, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowDownRight } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   const { setTheme, resolvedTheme } = useTheme();
@@ -40,9 +42,6 @@ export default function Home() {
               className="text-sm font-medium hover:underline"
             >
               Experience
-            </a>
-            <a href="#contact" className="text-sm font-medium hover:underline">
-              Contact
             </a>
             <button
               onClick={() =>
@@ -139,7 +138,8 @@ export default function Home() {
                   "Docker",
                   "AWS",
                 ]}
-                link="https://ridemama.in"
+                link="/project/ridemama"
+                liveLink="https://ridemama.in"
                 imageSrc={ridemama}
               />
               <ProjectCard
@@ -155,7 +155,8 @@ export default function Home() {
                   "Cloudinary",
                   "JWT",
                 ]}
-                link="https://eatoes-digital-diner.vercel.app/"
+                link="/project/digitalDiner"
+                liveLink="https://eatoes-digital-diner.vercel.app/"
                 imageSrc={onlineDiner}
               />
               <ProjectCard
@@ -166,10 +167,10 @@ export default function Home() {
                   "Tailwind CSS",
                   "Express.js",
                   "Fingerprint.js",
-                  "",
                 ]}
-                link="https://github.com/SuryatejPonnapalli/drm-system"
-                imageSrc={onlineDiner}
+                link="/project/drmSystem"
+                githubUrl="https://github.com/SuryatejPonnapalli/drm-system"
+                imageSrc={drmSystem}
               />
             </div>
           </div>
@@ -177,7 +178,7 @@ export default function Home() {
 
         <section
           id="experience"
-          className="w-full py-6 md:py-10 lg:py-12 bg-muted/50"
+          className="w-full py-6 md:py-10 lg:py-12 md:bg-muted/50"
         >
           <div className="mx-auto flex max-w-[980px] flex-col items-start gap-4">
             <h2 className="text-3xl font-bold leading-tight tracking-tighter md:text-4xl">
@@ -202,108 +203,24 @@ export default function Home() {
             </h2>
             <div>
               <p className="mb-4">
-                I'm a passionate web developer with over 2+ years of experience
-                building modern web applications. I specialize in creating
-                responsive, accessible, and performant user interfaces.
+                I'm a passionate full-stack developer with over 2+ years of
+                experience building modern, scalable web applications. While I
+                enjoy crafting responsive and accessible user interfaces, my
+                true strength lies in architecting robust backend systems and
+                APIs.
               </p>
               <p className="mb-4">
-                My journey in web development started when I in college, and
-                I've been in love with creating digital experiences ever since.
-                I enjoy solving complex problems and learning new technologies.
+                My journey in web development began during college, and I've
+                been fascinated ever since by how front-end and back-end
+                technologies come together to create seamless digital
+                experiences. I take pride in writing clean, maintainable
+                code—whether it's on the client or server side—and I'm always
+                eager to explore new tools and frameworks.
               </p>
               <p>
                 When I'm not coding, you can find me travelling, gaming or
                 watching anime.
               </p>
-            </div>
-          </div>
-        </section>
-
-        <section
-          id="contact"
-          className="w-full bg-muted/50 py-12 md:py-24 lg:py-32"
-        >
-          <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col items-start gap-6">
-              <h2 className="text-3xl font-bold leading-tight tracking-tighter md:text-4xl">
-                Contact
-              </h2>
-              <p className="max-w-[750px] text-lg text-muted-foreground">
-                Feel free to reach out to me for collaborations or just a
-                friendly chat.
-              </p>
-            </div>
-
-            <div className="mt-10 grid gap-12 md:grid-cols-2">
-              {/* Contact Info */}
-              <div>
-                <h3 className="text-xl font-semibold mb-2">
-                  Contact Information
-                </h3>
-                <p className="mb-2">Email: suryatej.ind@gmail.com</p>
-                <p className="mb-2">Location: Hyderabad, IN</p>
-                <div className="flex gap-4 mt-4">
-                  <Button asChild variant="outline">
-                    <a
-                      href="https://github.com"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <Github className="h-4 w-4 mr-2" />
-                      GitHub
-                    </a>
-                  </Button>
-                  <Button asChild variant="outline">
-                    <a
-                      href="https://linkedin.com"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <Linkedin className="h-4 w-4 mr-2" />
-                      LinkedIn
-                    </a>
-                  </Button>
-                </div>
-              </div>
-
-              {/* Contact Form */}
-              <div>
-                <h3 className="text-xl font-semibold mb-4">Send a Message</h3>
-                <form className="space-y-4">
-                  <div className="grid gap-2">
-                    <label htmlFor="name" className="text-sm font-medium">
-                      Name
-                    </label>
-                    <input
-                      id="name"
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                      placeholder="Your name"
-                    />
-                  </div>
-                  <div className="grid gap-2">
-                    <label htmlFor="email" className="text-sm font-medium">
-                      Email
-                    </label>
-                    <input
-                      id="email"
-                      type="email"
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                      placeholder="Your email"
-                    />
-                  </div>
-                  <div className="grid gap-2">
-                    <label htmlFor="message" className="text-sm font-medium">
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      className="min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                      placeholder="Your message"
-                    />
-                  </div>
-                  <Button type="submit">Send Message</Button>
-                </form>
-              </div>
             </div>
           </div>
         </section>
@@ -318,12 +235,16 @@ function ProjectCard({
   technologies,
   imageSrc,
   link,
+  liveLink,
+  githubUrl,
 }: {
   title: string;
   description: string;
   imageSrc: any;
   technologies: string[];
   link: string;
+  liveLink?: string;
+  githubUrl?: string;
 }) {
   return (
     <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-2">
@@ -347,15 +268,22 @@ function ProjectCard({
             ))}
           </div>
           <Button asChild size="sm">
-            <a href={link} target="_blank" rel="noreferrer">
-              View Project
-            </a>
+            <Link href={link}>View Project</Link>
           </Button>
-          <Button asChild size="sm" className="ml-4">
-            <a href={link} target="_blank" rel="noreferrer">
-              Live Link
-            </a>
-          </Button>
+          {liveLink && (
+            <Button asChild size="sm" className="ml-4">
+              <a href={liveLink} target="_blank" rel="noreferrer">
+                Live Link
+              </a>
+            </Button>
+          )}
+          {githubUrl && (
+            <Button asChild size="sm" className="ml-4">
+              <a href={githubUrl} target="_blank" rel="noreferrer">
+                Github
+              </a>
+            </Button>
+          )}
         </div>
       </CardContent>
     </Card>

@@ -3,7 +3,7 @@ import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
 import { useState, useEffect } from "react";
 import profilePhoto from "@/public/profilePhoto.png";
-import ridemama from "@/public/ridemama.jpeg";
+import ridemama from "@/public/ridemama.png";
 import onlineDiner from "@/public/online-diner.png";
 import drmSystem from "@/public/drm-system.png";
 import Image from "next/image";

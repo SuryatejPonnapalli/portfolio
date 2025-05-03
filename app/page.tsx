@@ -61,9 +61,9 @@ export default function Home() {
                 Hi, I&apos;m Suryatej Ponnapalli
               </h1>
               <p className="max-w-[750px] text-base text-muted-foreground sm:text-lg">
-                A passionate full-stack developer with expertise in React,
-                Next.js, and Node.js. I build accessible, responsive, and
-                performant web applications.
+                A full-stack developer with expertise in React, Next.js, and
+                Node.js. I build accessible, responsive, and performant web
+                applications.
               </p>
               <div className="flex items-center gap-4">
                 <a href="/resume.pdf" target="_blank">
@@ -194,7 +194,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="w-full py-12 md:py-24 lg:py-32">
+        {/* <section id="about" className="w-full py-12 md:py-24 lg:py-32">
           <div className="mx-auto flex max-w-[980px] flex-col items-start gap-4">
             <h2 className="text-3xl font-bold leading-tight tracking-tighter md:text-4xl">
               About Me
@@ -221,7 +221,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
     </div>
   );

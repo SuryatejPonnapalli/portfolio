@@ -93,7 +93,7 @@ export const digitalDinerProjectData = {
   ],
   setupInstructions: `
   1. Clone the repo.\n
-     git clone https://github.com/SuryatejPonnapalli/eatoes-digital-diner.git\n
+     git clone https://github.com/SuryatejPonnapalli/digital-diner.git\n
   2. Setup the backend:\n
      cd backend\n
      npm i\n
@@ -105,7 +105,7 @@ export const digitalDinerProjectData = {
      cd ../frontend\n
      npm i\n
      npm run dev`,
-  githubUrl: "https://github.com/SuryatejPonnapalli/eatoes-digital-diner", // Add your GitHub URL here if available
+  githubUrl: "https://github.com/SuryatejPonnapalli/digital-diner", // Add your GitHub URL here if available
   liveUrl: "https://eatoes-digital-diner.vercel.app/",
   images: [
     {

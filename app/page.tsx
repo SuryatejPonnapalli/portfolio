@@ -157,7 +157,7 @@ export default function Home() {
                   "JWT",
                 ]}
                 link="/project/digitalDiner"
-                liveLink="https://eatoes-digital-diner.vercel.app/"
+                githubUrl="https://github.com/SuryatejPonnapalli/digital-diner"
                 imageSrc={onlineDiner}
               />
               <ProjectCard

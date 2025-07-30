@@ -106,7 +106,7 @@ export const digitalDinerProjectData = {
      npm i\n
      npm run dev`,
   githubUrl: "https://github.com/SuryatejPonnapalli/digital-diner", // Add your GitHub URL here if available
-  liveUrl: "https://eatoes-digital-diner.vercel.app/",
+  liveUrl: "null",
   images: [
     {
       url: "/online-diner.png",

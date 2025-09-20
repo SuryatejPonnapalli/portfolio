@@ -34,14 +34,14 @@ export default function Home() {
             Suryatej Ponnapalli
           </div>
           <nav className="flex items-center gap-4">
-            <a href="#projects" className="text-sm font-medium hover:underline">
-              Projects
-            </a>
             <a
               href="#experience"
               className="text-sm font-medium hover:underline"
             >
               Experience
+            </a>
+            <a href="#projects" className="text-sm font-medium hover:underline">
+              Projects
             </a>
             <button
               onClick={() =>
@@ -113,6 +113,23 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="experience" className="w-full py-6 md:py-10 lg:py-12">
+          <div className="mx-auto flex max-w-[980px] flex-col items-start gap-4">
+            <h2 className="text-3xl font-bold leading-tight tracking-tighter md:text-4xl">
+              Experience
+            </h2>
+            <div className="grid gap-8 w-full">
+              <ExperienceCard
+                company="Qritrim Inc."
+                role="React Intern"
+                period="May 2024 - June 2024"
+                description="Built a responsive UI for a chatbot with history, including whatsapp like date system."
+                technologies={["React", "Redash", "Less CSS"]}
+              />
+            </div>
+          </div>
+        </section>
+
         <section id="projects" className="w-full py-8 md:py-12 lg:py-16">
           <div className="mx-auto flex max-w-[980px] flex-col items-start gap-6">
             <div className="w-full">
@@ -172,23 +189,6 @@ export default function Home() {
                 link="/project/drmSystem"
                 githubUrl="https://github.com/SuryatejPonnapalli/drm-system"
                 imageSrc={drmSystem}
-              />
-            </div>
-          </div>
-        </section>
-
-        <section id="experience" className="w-full py-6 md:py-10 lg:py-12">
-          <div className="mx-auto flex max-w-[980px] flex-col items-start gap-4">
-            <h2 className="text-3xl font-bold leading-tight tracking-tighter md:text-4xl">
-              Experience
-            </h2>
-            <div className="grid gap-8 w-full">
-              <ExperienceCard
-                company="Qritrim Inc."
-                role="React Intern"
-                period="May 2024 - June 2024"
-                description="Built a responsive UI for a chatbot with history, including whatsapp like date system."
-                technologies={["React", "Redash", "Less CSS"]}
               />
             </div>
           </div>

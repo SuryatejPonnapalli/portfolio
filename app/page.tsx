@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import profilePhoto from "@/public/profilePhoto.png";
 import ridemama from "@/public/ridemama.png";
 import onlineDiner from "@/public/online-diner.png";
-import drmSystem from "@/public/drm-system.png";
+import goConcurrency from "@/public/projectImages/go-concurrency/homepage.png";
 import Image from "next/image";
 import { Github, Mail, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -42,6 +42,9 @@ export default function Home() {
             </a>
             <a href="#projects" className="text-sm font-medium hover:underline">
               Projects
+            </a>
+            <a href="/blogs" className="text-sm font-medium hover:underline">
+              Blogs
             </a>
             <button
               onClick={() =>
@@ -160,6 +163,22 @@ export default function Home() {
                 imageSrc={ridemama}
               />
               <ProjectCard
+                title="Go LLM Concurrency & Semantic Caching System"
+                description="A high-performance LLM backend built with Go, Redis, and Python that eliminates duplicate LLM calls using singleflight, semantic caching with embeddings, and a Redis-powered job queue."
+                technologies={[
+                  "Go (Gin)",
+                  "Redis",
+                  "Python FastAPI",
+                  "Ollama",
+                  "PostgreSQL",
+                  "singleflight",
+                  "REST APIs",
+                ]}
+                link="/project/goConcurrency"
+                githubUrl="https://github.com/SuryatejPonnapalli/go-distributed-queue"
+                imageSrc={goConcurrency}
+              />
+              <ProjectCard
                 title="Digital Diner"
                 description="An online diner system, which automates the system of ordering food in a restaurant."
                 technologies={[
@@ -176,19 +195,6 @@ export default function Home() {
                 link="/project/digitalDiner"
                 githubUrl="https://github.com/SuryatejPonnapalli/digital-diner"
                 imageSrc={onlineDiner}
-              />
-              <ProjectCard
-                title="DRM System"
-                description="A DRM system which prevents recording or cloning of data from a website."
-                technologies={[
-                  "Next.js",
-                  "Tailwind CSS",
-                  "Express.js",
-                  "Fingerprint.js",
-                ]}
-                link="/project/drmSystem"
-                githubUrl="https://github.com/SuryatejPonnapalli/drm-system"
-                imageSrc={drmSystem}
               />
             </div>
           </div>

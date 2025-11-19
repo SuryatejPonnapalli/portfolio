@@ -191,3 +191,57 @@ export const videoStreamingDRMProjectData = {
     },
   ],
 };
+
+export const goLLMConcurrencyProjectData = {
+  title: "Go LLM Concurrency & Semantic Caching System",
+  slug: "go-llm-concurrency-semantic-cache",
+  description:
+    "A high-performance LLM backend built with Go, Redis, and Python that eliminates duplicate LLM calls using singleflight, semantic caching with embeddings, and a Redis-powered job queue.",
+  longDescription: `This system is designed to optimize LLM inference by combining Go’s concurrency model with semantic caching and distributed job queues. The service intercepts user prompts, checks an exact Redis cache, computes embeddings for semantic similarity matching, and uses Go’s singleflight to deduplicate concurrent identical requests. On a cache miss, prompts are pushed into a Redis-backed queue where worker services fetch jobs, call the Python FastAPI LLM runtime, and store responses back in Redis. The result is a highly efficient, scalable LLM architecture that reduces compute cost, prevents redundant LLM calls, and improves throughput.`,
+
+  technologies: [
+    "Go (Gin)",
+    "Redis",
+    "Python FastAPI",
+    "Ollama",
+    "PostgreSQL",
+    "singleflight",
+    "REST APIs",
+  ],
+
+  features: [
+    "Exact caching of LLM responses using Redis",
+    "Semantic caching with vector embeddings and cosine similarity",
+    "Concurrency deduplication using Go's singleflight",
+    "Redis-backed job queue for asynchronous LLM processing",
+    "Go worker service to execute queued LLM tasks",
+    "Python FastAPI microservice for embeddings and model inference",
+    "Ollama backend for local LLM execution",
+    "High scalability with distributed job consumers",
+    "Reduces duplicate LLM calls by batching identical requests",
+  ],
+
+  setupInstructions: `
+  1. Clone the repository:
+     git clone https://github.com/SuryatejPonnapalli/go-distributed-queue.git
+
+  2. Follow the Readme.md instructions.
+  `,
+
+  githubUrl: "https://github.com/SuryatejPonnapalli/go-distributed-queue",
+  liveUrl: "null", //
+
+  images: [
+    {
+      url: "/blogImages/go-concurrency.png",
+      alt: "LLM concurrency architecture",
+      caption:
+        "High-level architecture of Go API, Redis cache, and Python LLM service.",
+    },
+    {
+      url: "/projectImages/go-concurrency/homepage.png",
+      alt: "Secure video streaming homepage",
+      caption: "Homepage with login and secure video content preview",
+    },
+  ],
+};

@@ -6,6 +6,7 @@ import {
   ridemamaProjectData,
   digitalDinerProjectData,
   videoStreamingDRMProjectData,
+  goLLMConcurrencyProjectData,
 } from "@/components/Projects/ProjectData";
 
 export default function Page() {
@@ -15,6 +16,9 @@ export default function Page() {
     <>
       {params.project === "ridemama" && (
         <ProjectPage project={ridemamaProjectData} />
+      )}
+      {params.project === "goConcurrency" && (
+        <ProjectPage project={goLLMConcurrencyProjectData} />
       )}
       {params.project === "digitalDiner" && (
         <ProjectPage project={digitalDinerProjectData} />

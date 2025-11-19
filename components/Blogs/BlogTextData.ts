@@ -6,7 +6,7 @@ export const blogPosts: Record<string, any> = {
     description:
       "A deep dive into how I built a scalable Go microservice that deduplicates concurrent LLM requests, adds semantic caching, and uses Redis-backed job queues for cost-efficient, low-latency inference.",
     author: "Suryatej Ponnapalli",
-    date: "2024-11-19",
+    date: "2025-11-19",
     readTime: "10 min read",
     category: "Go, LLMs",
     content: [

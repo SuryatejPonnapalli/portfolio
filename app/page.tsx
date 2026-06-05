@@ -2,7 +2,7 @@
 import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
 import { useState, useEffect } from "react";
-import profilePhoto from "@/public/profilePhoto.png";
+import profilePhoto from "@/public/profilePhoto.jpeg";
 import ridemama from "@/public/ridemama.png";
 import onlineDiner from "@/public/online-diner.png";
 import goConcurrency from "@/public/projectImages/go-concurrency/homepage.png";
